@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CosmoSun - Energia Inteligente</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/x-icon" href="img/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tema.css">
 </head>
 <body>
 
     <!-- Cabeçalho e Menu de Navegação -->
     <header class="header">
         <div class="logo-container">
-            <img src="img/logoPng.png" alt="Logotipo CosmoSun mostrando um sol e painel solar" class="logo">
+            <img src="img/logoPng.png" id="logo-img" alt="Logotipo CosmoSun" class="logo">
         </div>
         <nav class="menu">
             <ul>
@@ -28,6 +31,13 @@
                 <li><a href="#aplicacao">Aplicação</a></li>
             </ul>
         </nav>
+
+        <div class="theme-switcher">
+            <button class="theme-btn" data-theme="theme-light">Claro</button>
+            <button class="theme-btn" data-theme="theme-dark">Escuro</button>
+            <button class="theme-btn" data-theme="theme-contrast">Contraste</button>
+        </div>
+
     </header>
 
     <main>
@@ -122,6 +132,8 @@
             <p>Luiz - RM: 572446</p>
         </div>
     </footer>
-
+    
+    <script src="js/tema.js"></script>
+    
 </body>
 </html>
