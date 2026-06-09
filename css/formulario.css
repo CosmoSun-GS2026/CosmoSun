@@ -68,3 +68,10 @@
     cursor: pointer;
     border: none;
 }
+
+
+.image-content-grafico img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
