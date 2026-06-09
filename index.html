@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CosmoSun - Energia Inteligente</title>
     <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/formulario.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -165,6 +166,42 @@
                 <img src="img/celular.png" alt="Imagem de um celular acessando a plataforma CosmoSun">
             </div>
         </section>
+
+        <section id="simulacao" class="content-section reverse">
+        <div class="text-content">
+            <h2>Simule sua Economia</h2>
+            <p>Preencha os dados abaixo para que nosso sistema cruze sua localização com a API da NASA e gere sua simulação gratuita.</p>
+
+            <form id="form-contato" class="form-container">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Ex: Orion C. França">
+                    <span class="error-msg" id="error-nome">⚠️ O nome é obrigatório.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail de Contato</label>
+                    <input type="email" id="email" placeholder="Ex: contato@email.com">
+                    <span class="error-msg" id="error-email">⚠️ O e-mail é obrigatório.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="conta">Média da Conta de Luz (R$)</label>
+                    <input type="number" id="conta" placeholder="Ex: 250">
+                    <span class="error-msg" id="error-conta">⚠️ Informe o valor médio da conta.</span>
+                </div>
+
+                <button type="submit" class="btn btn-submit">Iniciar Processamento</button>
+
+                <div id="form-sucesso" class="sucesso-msg" style="display: none;">
+                    <p>✅ Dados recebidos! Processando viabilidade...</p>
+                </div>
+            </form>
+        </div>
+        <div class="image-content">
+            <img src="" alt="Gráficos financeiros mostrando economia">
+        </div>
+    </section>
     </main>
 
     <!-- Rodapé Padronizado -->
@@ -179,6 +216,6 @@
     
     <script src="js/tema.js"></script>
     <script src="js/slider.js"></script>
-    
+    <script src="js/formulario.js"></script>
 </body>
 </html>
