@@ -1,0 +1,53 @@
+body { 
+    color: var(--text-dark); 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/* Variáveis do Tema Escuro */
+body.theme-dark {
+    --bg-light: #121212; 
+    --text-dark: #E0E0E0; 
+    --header-bg: #1E1E1E; 
+    --section-alt-bg: #1A1A1A;
+}
+
+/* Variáveis do Tema de Alto Contraste */
+body.theme-contrast {
+    --bg-light: #000000; 
+    --text-dark: #FFFF00; 
+    --accent-orange: #FFFF00; 
+    --header-bg: #000000; 
+    --section-alt-bg: #000000;
+}
+
+body.theme-dark .hero-content h1,
+body.theme-dark .hero-content p {
+    color: #F8F9FA;
+}
+
+body.theme-contrast .hero-content h1,
+body.theme-contrast .hero-content p {
+    color: #FFFF00;
+}
+
+/* Estilização dos botões do trocador de tema */
+.theme-switcher { 
+    display: flex; 
+    gap: 10px; 
+}
+
+.theme-btn {
+    padding: 5px 10px; 
+    border: 1px solid var(--accent-orange); 
+    background: transparent;
+    color: var(--text-dark); 
+    cursor: pointer; 
+    border-radius: 4px; 
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-btn:hover { 
+    background: var(--accent-orange); 
+    color: var(--bg-light); 
+}
