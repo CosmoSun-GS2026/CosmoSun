@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/tema.css">
+    <link rel="stylesheet" href="css/slider.css">
 </head>
 <body>
 
@@ -71,6 +72,49 @@
             </div>
             <div class="image-content">
                 <img src="img/imagem satelite.jpg" alt="Imagem de um satélite">
+            </div>
+        </section>
+
+        <!-- SlideShow -->
+        <section id="galeria" class="content-section">
+            <div class="text-content" style="text-align: center; width: 100%; flex: none;">
+                <h2>A Jornada da Energia</h2>
+                <p style="margin-bottom: 40px; font-size: 1.1rem; text-align: center;">Do espaço até a sua tomada: entenda como a CosmoSun transforma dados em economia real.</p>                
+                <div class="slideshow-container">
+                    
+                    <div class="slide fade">
+                        <img src="img/planeta.jpg" alt="Visão da órbita da Terra">
+                        <div class="slide-caption">
+                            <h3>1. Captação Inteligente</h3>
+                            <p>Utilizamos dados climáticos precisos de satélites da NASA para mapear o potencial de irradiação solar na sua região.</p>
+                        </div>
+                    </div>
+
+                    <div class="slide fade">
+                        <img src="img/analise.jpg" alt="Telas mostrando gráficos e análises de dados">
+                        <div class="slide-caption">
+                            <h3>2. Análise de Viabilidade</h3>
+                            <p>Nosso sistema cruza o histórico espacial com o seu CEP para gerar um diagnóstico financeiro e energético instantâneo.</p>
+                        </div>
+                    </div>
+
+                    <div class="slide fade">
+                        <img src="img/instalando2.jpg" alt="Casa moderna com arquitetura sustentável">
+                        <div class="slide-caption">
+                            <h3>3. Independência Financeira</h3>
+                            <p>Conectamos você aos melhores instaladores, reduzindo a sua conta de luz em até 95% todos os meses.</p>
+                        </div>
+                    </div>
+
+                    <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+                    
+                    <div class="dot-container">
+                        <span class="dot" onclick="slideAtual(1)"></span> 
+                        <span class="dot" onclick="slideAtual(2)"></span> 
+                        <span class="dot" onclick="slideAtual(3)"></span> 
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -134,6 +178,7 @@
     </footer>
     
     <script src="js/tema.js"></script>
+    <script src="js/slider.js"></script>
     
 </body>
 </html>
