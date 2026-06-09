@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/tema.css">
     <link rel="stylesheet" href="css/slider.css">
+
+    <link rel="stylesheet" href="css/quiz.css">
 </head>
 <body>
 
@@ -198,10 +200,36 @@
                 </div>
             </form>
         </div>
-        <div class="image-content">
-            <img src="" alt="Gráficos financeiros mostrando economia">
+        <div class="image-content-grafico">
+            <img src="img/grafico.png" alt="Gráficos financeiros mostrando economia">
         </div>
     </section>
+
+    <section id="quiz-section" class="content-section">
+        <div class="text-content" style="width: 100%; flex: none; text-align: center;">
+            <h2>Teste seus Conhecimentos</h2>
+            <p>Descubra o quanto você sabe sobre energia solar e tecnologia climática.</p>
+
+            <div id="quiz-container" class="quiz-box">
+                <div class="quiz-header">
+                    <span id="progresso-texto">Pergunta 1 de 10</span>
+                    <div class="barra-progresso"><div id="barra-preenchimento"></div></div>
+                </div>
+
+                <h3 id="pergunta-texto">A pergunta aparecerá aqui</h3>
+                <div id="opcoes-container" class="opcoes-box">
+                    </div>
+            </div>
+
+            <div id="resultado-container" class="quiz-box" style="display: none;">
+                <h3>Processamento Concluído</h3>
+                <p id="pontuacao-texto" style="font-size: 1.5rem; margin: 20px 0; font-weight: 800; color: var(--accent-orange);"></p>
+                <p id="mensagem-resultado" style="margin-bottom: 20px;"></p>
+                <button id="btn-reiniciar" class="btn">Reiniciar Teste</button>
+            </div>
+        </div>
+    </section>
+
     </main>
 
     <!-- Rodapé Padronizado -->
@@ -217,5 +245,6 @@
     <script src="js/tema.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/formulario.js"></script>
+    <script src="js/quiz.js"></script>
 </body>
 </html>
