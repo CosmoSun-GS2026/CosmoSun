@@ -1,0 +1,236 @@
+/* =========================================
+    RESET CSS & VARIÁVEIS
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-light: #F8F9FA;         /* Fundo off-white */
+    --text-dark: #0B1528;        /* Azul escuro da logo para o texto */
+    --accent-orange: #F38A1D;    /* Laranja da logo para destaques */
+    --header-bg: #FFFFFF;        /* Fundo branco puro para header */
+    --hover-orange: #d17516;     /* Laranja escuro para hovers */
+    --section-alt-bg: #EAECEF;   /* Cinza muito claro para alternar seções */
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+}
+
+body {
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+/* =========================================
+    HEADER & MENU (FLEXBOX)
+   ========================================= */
+.header {
+    background-color: var(--header-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.hero {
+    background-image: linear-gradient(rgba(11, 21, 40, 0.65), rgba(11, 21, 40, 0.85)), 
+                    url('../img/painel-solar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 85vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--bg-light);
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+.hero-content h1 span {
+    color: var(--accent-orange);
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    color: var(--bg-light);
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+/* Botão de Ação */
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--accent-orange);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(243, 138, 29, 0.3);
+}
+
+.btn:hover {
+    background-color: var(--hover-orange);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(243, 138, 29, 0.5);
+}
+
+.logo-container .logo {
+    height: 45px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: var(--accent-orange);
+}
+
+/* =========================================
+    SEÇÕES DE CONTEÚDO
+   ========================================= */
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    min-height: 50vh;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternar cor de fundo para clareza de navegação */
+.content-section:nth-child(even) {
+    background-color: var(--section-alt-bg);
+}
+
+/* Inverter a ordem visual em algumas seções para dinamismo */
+.content-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1;
+    padding: 0 40px;
+}
+
+.text-content h2 {
+    color: var(--accent-orange);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-content img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de hover na imagem */
+.image-content img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================================
+    RODAPÉ
+   ========================================= */
+.footer {
+    background-color: var(--text-dark);
+    color: var(--bg-light);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer p {
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.integrantes {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-weight: 400;
+}
+
+/* =========================================
+    RESPONSIVIDADE SIMPLES
+   ========================================= */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .content-section, .content-section.reverse {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .text-content {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .integrantes {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
